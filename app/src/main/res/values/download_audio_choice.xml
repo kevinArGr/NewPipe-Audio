@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="audio_track_type_auto_dubbed">auto-dubbed by YouTube</string>
+    <string name="download_audio_track_label">Audio to download (original or dubbed)</string>
+    <string name="download_audio_track_unavailable">The selected audio cannot be combined with this video format. Choose another video format or audio track.</string>
+</resources>
