@@ -19,6 +19,7 @@ plugins {
 
 val gitWorkingBranch = providers.exec {
     commandLine("git", "rev-parse", "--abbrev-ref", "HEAD")
+    isIgnoreExitValue = true // Source ZIPs do not contain a Git checkout.
 }.standardOutput.asText.map { it.trim() }
 val defaultBranches = listOf("master", "dev")
 val workingBranch = gitWorkingBranch.getOrElse("")
@@ -60,14 +61,9 @@ configure<ApplicationExtension> {
         debug {
             isDebuggable = true
 
-            // suffix the app id and the app name with git branch name
-            if (normalizedWorkingBranch.isEmpty() || workingBranch in defaultBranches) {
-                applicationIdSuffix = ".debug"
-                resValue("string", "app_name", "NewPipe Debug")
-            } else {
-                applicationIdSuffix = ".debug.$normalizedWorkingBranch"
-                resValue("string", "app_name", "NewPipe $workingBranch")
-            }
+            applicationIdSuffix = ".audiochoice"
+            versionNameSuffix = "-audio-choice"
+            resValue("string", "app_name", "NewPipe Audio")
         }
 
         release {
@@ -223,6 +219,7 @@ dependencies {
     implementation(projects.shared)
     implementation(libs.newpipe.nanojson)
     implementation(libs.newpipe.extractor)
+    implementation(libs.google.protobuf)
     implementation(libs.newpipe.filepicker)
 
     // Checkstyle
