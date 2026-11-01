@@ -347,6 +347,10 @@ public final class Localization {
             name = context.getString(R.string.unknown_audio_track);
         }
 
+        if (YoutubeAudioTrackHelper.isAutoDubbed(track)) {
+            return context.getString(R.string.audio_track_name, name,
+                    context.getString(R.string.audio_track_type_auto_dubbed));
+        }
         if (track.getAudioTrackType() != null) {
             final String trackType = audioTrackType(context, track.getAudioTrackType());
             return context.getString(R.string.audio_track_name, name, trackType);

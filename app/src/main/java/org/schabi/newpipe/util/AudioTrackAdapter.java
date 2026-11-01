@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -50,25 +49,16 @@ public class AudioTrackAdapter extends BaseAdapter {
         final View view;
         if (convertView == null) {
             view = LayoutInflater.from(context).inflate(
-                    R.layout.stream_quality_item, parent, false);
+                    R.layout.audio_track_item, parent, false);
         } else {
             view = convertView;
         }
 
-        final ImageView woSoundIconView = view.findViewById(R.id.wo_sound_icon);
-        final TextView formatNameView = view.findViewById(R.id.stream_format_name);
         final TextView qualityView = view.findViewById(R.id.stream_quality);
-        final TextView sizeView = view.findViewById(R.id.stream_size);
 
         final List<AudioStream> streams = getItem(position);
         final AudioStream stream = streams.get(0);
 
-        woSoundIconView.setVisibility(View.GONE);
-        sizeView.setVisibility(View.VISIBLE);
-
-        if (stream.getAudioTrackId() != null) {
-            formatNameView.setText(stream.getAudioTrackId());
-        }
         qualityView.setText(Localization.audioTrackName(context, stream));
 
         return view;
