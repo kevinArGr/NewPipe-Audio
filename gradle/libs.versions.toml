@@ -52,6 +52,7 @@ okhttp = "5.4.0"
 phoenix = "3.0.0"
 preference = "1.2.1"
 prettytime = "5.0.8.Final"
+protobuf = "4.35.1"
 recyclerview = "1.4.0"
 room = "2.8.4"
 runner = "1.7.0"
@@ -126,6 +127,7 @@ google-exoplayer-hls = { module = "com.google.android.exoplayer:exoplayer-hls", 
 google-exoplayer-mediasession = { module = "com.google.android.exoplayer:extension-mediasession", version.ref = "exoplayer" }
 google-exoplayer-smoothstreaming = { module = "com.google.android.exoplayer:exoplayer-smoothstreaming", version.ref = "exoplayer" }
 google-exoplayer-ui = { module = "com.google.android.exoplayer:exoplayer-ui", version.ref = "exoplayer" }
+google-protobuf = { module = "com.google.protobuf:protobuf-javalite", version.ref = "protobuf" }
 jakewharton-phoenix = { module = "com.jakewharton:process-phoenix", version.ref = "phoenix" }
 jakewharton-rxbinding = { module = "com.jakewharton.rxbinding4:rxbinding", version.ref = "rxbinding" }
 jetbrains-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "multiplatform" }
