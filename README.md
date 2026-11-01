@@ -1,3 +1,11 @@
+# NewPipe Audio — versión modificada no oficial
+
+Esta rama añade selección de audio original o doblado para descargas de YouTube.
+Consulta [los cambios, compilación y mantenimiento](AUDIO-CHOICE.md).
+Derivada de NewPipe v0.29.1 bajo GPL v3 o posterior.
+
+El README del proyecto original se conserva a continuación.
+
 <p align="center"><a href="https://newpipe.net"><img src="assets/new_pipe_icon_5.png" width="150"></a></p> 
 <h2 align="center"><b>NewPipe</b></h2>
 <h4 align="center">A libre lightweight streaming front-end for Android.</h4>
