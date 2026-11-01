@@ -71,11 +71,21 @@
         android:minWidth="150dp"
         tools:listitem="@layout/stream_quality_item" />
 
+    <TextView
+        android:id="@+id/audio_track_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quality_spinner"
+        android:layout_marginHorizontal="24dp"
+        android:labelFor="@id/audio_track_spinner"
+        android:text="@string/download_audio_track_label"
+        android:visibility="gone" />
+
     <Spinner
         android:id="@+id/audio_track_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/quality_spinner"
+        android:layout_below="@+id/audio_track_label"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
